@@ -1,48 +1,118 @@
-# Vault — Full-Stack Auth App
+# 🚀 Vault — Full-Stack Authentication App
 
-```
+A secure, full-stack authentication system with user signup/login, JWT-based authorization, and a protected dashboard — deployed live on the cloud.
+
+---
+
+## 🌐 Live Demo
+
+- 🔗 Frontend: https://your-app.netlify.app  
+- ⚙️ Backend API: https://auth-app-y8l2.onrender.com  
+
+---
+
+## 🧩 Tech Stack
+
+- Frontend: HTML, CSS, Vanilla JavaScript  
+- Backend: Node.js, Express.js  
+- Database: MongoDB Atlas  
+- Authentication: JWT + bcrypt  
+- Deployment: Netlify (frontend), Render (backend)
+
+---
+
+## 📁 Project Structure
+
 /auth-app
 ├── /backend
 │   ├── /middleware
-│   │   └── auth.js          # JWT protect middleware
+│   │   └── auth.js
 │   ├── /models
-│   │   └── User.js          # Mongoose user model (bcrypt hashing)
+│   │   └── User.js
 │   ├── /routes
-│   │   ├── auth.js          # POST /api/auth/signup, /api/auth/login
-│   │   └── user.js          # GET /api/user/me, /api/user/dashboard (protected)
-│   ├── .env                 # Environment variables
+│   │   ├── auth.js
+│   │   └── user.js
+│   ├── .env
 │   ├── package.json
-│   └── server.js            # Express entry point
+│   └── server.js
 │
 └── /frontend
-    ├── index.html           # Auth page (login + signup tabs)
-    ├── dashboard.html       # Protected dashboard
-    ├── style.css            # Full stylesheet
-    └── app.js               # Frontend logic + fetch API calls
-```
+    ├── index.html
+    ├── dashboard.html
+    ├── style.css
+    └── app.js
 
-## Setup
+---
 
-### Backend
-```bash
-cd backend
-npm install
-# Edit .env with your MongoDB URI and JWT secret
-npm run dev
-```
+## ✨ Features
 
-### Frontend
-```bash
-# Serve frontend/index.html via any static server
-# e.g.: npx serve frontend
-```
+- Secure user authentication (Signup & Login)
+- Password hashing using bcrypt
+- JWT-based authorization
+- Protected API routes
+- MongoDB database integration
+- Fully deployed (frontend + backend)
+- Simple and responsive UI
 
-## API Endpoints
+---
 
-| Method | Route | Auth | Description |
-|--------|-------|------|-------------|
-| POST | /api/auth/signup | No | Register new user |
-| POST | /api/auth/login | No | Login, returns JWT |
-| GET | /api/user/me | Bearer JWT | Get current user |
-| GET | /api/user/dashboard | Bearer JWT | Dashboard data |
-| GET | /api/health | No | Health check |
+## 📸 Screenshots
+
+Login Page → images/image.png  
+Dashboard → images/image2.png
+
+---
+
+## ⚙️ Setup Instructions
+
+Backend:
+cd backend  
+npm install  
+
+Create .env:
+MONGO_URI=your_mongodb_connection_string  
+JWT_SECRET=your_secret_key  
+PORT=5000  
+
+Run:
+npm start  
+
+Frontend:
+Open frontend/index.html  
+or  
+npx serve frontend  
+
+---
+
+## 📡 API Endpoints
+
+POST /api/auth/signup  
+POST /api/auth/login  
+GET /api/user/me  
+GET /api/user/dashboard  
+GET /api/health  
+
+---
+
+## 🔐 Authentication Flow
+
+1. User signs up or logs in  
+2. Server validates credentials  
+3. JWT token is generated  
+4. Token stored in browser  
+5. Protected routes require token  
+
+---
+
+## 🚀 Deployment
+
+Frontend → Netlify  
+Backend → Render  
+Database → MongoDB Atlas  
+
+---
+
+## 👩‍💻 Author
+
+Shramita Maheshwari
+
