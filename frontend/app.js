@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:5000/api';
+const API_BASE = 'https://auth-app-y8l2.onrender.com';
 
 /* ─── Utilities ─────────────────────────────────────────────── */
 function getToken() { return localStorage.getItem('vault_token'); }
