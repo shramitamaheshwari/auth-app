@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vault — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-page">
+  <div class="noise"></div>
+
+  <nav class="topbar">
+    <div class="topbar-logo">
+      <span class="logo-mark">V</span>
+      <span class="logo-text">Vault</span>
+    </div>
+    <div class="topbar-user">
+      <span class="user-greeting" id="user-greeting">Loading…</span>
+      <button class="logout-btn" onclick="handleLogout()">Logout →</button>
+    </div>
+  </nav>
+
+  <main class="dashboard-main">
+    <div class="dash-header">
+      <div class="dash-welcome">
+        <p class="dash-label">DASHBOARD</p>
+        <h1 class="dash-title" id="dash-title">—</h1>
+      </div>
+      <div class="dash-badge">
+        <span class="badge-dot pulse"></span>
+        <span>Active session</span>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-card accent">
+        <div class="stat-label">Member Since</div>
+        <div class="stat-value" id="stat-since">—</div>
+        <div class="stat-sub">Account created</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Last Active</div>
+        <div class="stat-value" id="stat-active">Now</div>
+        <div class="stat-sub">Current session</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Auth Method</div>
+        <div class="stat-value mono">JWT</div>
+        <div class="stat-sub">Token-based auth</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Security</div>
+        <div class="stat-value">bcrypt</div>
+        <div class="stat-sub">Password hashing</div>
+      </div>
+    </div>
+
+    <div class="profile-section">
+      <div class="section-header">
+        <span class="section-tag">PROFILE</span>
+        <h2>Your Details</h2>
+      </div>
+      <div class="profile-card">
+        <div class="profile-avatar" id="profile-avatar">?</div>
+        <div class="profile-info">
+          <div class="profile-row">
+            <span class="profile-key">Name</span>
+            <span class="profile-val" id="profile-name">—</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-key">Email</span>
+            <span class="profile-val" id="profile-email">—</span>
+          </div>
+          <div class="profile-row">
+            <span class="profile-key">User ID</span>
+            <span class="profile-val mono small" id="profile-id">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="token-section">
+      <div class="section-header">
+        <span class="section-tag">TOKEN</span>
+        <h2>JWT Access Token</h2>
+      </div>
+      <div class="token-card">
+        <pre class="token-display" id="token-display">Loading token…</pre>
+        <button class="copy-btn" onclick="copyToken()">Copy Token</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vault — Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <div class="split-layout">
+    <div class="brand-panel">
+      <div class="brand-content">
+        <div class="brand-mark">V</div>
+        <h1 class="brand-name">Vault</h1>
+        <p class="brand-tagline">Your private space.<br/>Secured.</p>
+        <div class="brand-features">
+          <div class="feature-item">
+            <span class="feature-dot"></span>
+            <span>JWT authentication</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-dot"></span>
+            <span>Encrypted passwords</span>
+          </div>
+          <div class="feature-item">
+            <span class="feature-dot"></span>
+            <span>Protected dashboard</span>
+          </div>
+        </div>
+        <div class="brand-grid">
+          <div class="grid-cell"></div>
+          <div class="grid-cell active"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell active"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell active"></div>
+          <div class="grid-cell active"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell active"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-panel">
+      <div class="form-container">
+        <div class="tab-switcher">
+          <button class="tab active" id="tab-login" onclick="switchTab('login')">Sign In</button>
+          <button class="tab" id="tab-signup" onclick="switchTab('signup')">Create Account</button>
+          <div class="tab-indicator" id="tab-indicator"></div>
+        </div>
+
+        <!-- Login Form -->
+        <div class="form-section active" id="form-login">
+          <div class="form-header">
+            <h2>Welcome back</h2>
+            <p>Enter your credentials to access your vault</p>
+          </div>
+          <div id="login-alert" class="alert hidden"></div>
+          <div class="field-group">
+            <label class="field-label" for="login-email">Email</label>
+            <div class="field-wrapper">
+              <input type="email" id="login-email" class="field-input" placeholder="you@example.com" autocomplete="email" />
+              <span class="field-icon">@</span>
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="login-password">Password</label>
+            <div class="field-wrapper">
+              <input type="password" id="login-password" class="field-input" placeholder="••••••••" autocomplete="current-password" />
+              <button class="field-toggle" onclick="togglePassword('login-password', this)" type="button">show</button>
+            </div>
+          </div>
+          <button class="submit-btn" id="login-btn" onclick="handleLogin()">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-loader hidden"></span>
+          </button>
+          <p class="form-switch">No account? <a href="#" onclick="switchTab('signup')">Create one →</a></p>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-section" id="form-signup">
+          <div class="form-header">
+            <h2>Create account</h2>
+            <p>Join Vault and secure your workspace</p>
+          </div>
+          <div id="signup-alert" class="alert hidden"></div>
+          <div class="field-group">
+            <label class="field-label" for="signup-name">Full Name</label>
+            <div class="field-wrapper">
+              <input type="text" id="signup-name" class="field-input" placeholder="Jane Smith" autocomplete="name" />
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="signup-email">Email</label>
+            <div class="field-wrapper">
+              <input type="email" id="signup-email" class="field-input" placeholder="you@example.com" autocomplete="email" />
+              <span class="field-icon">@</span>
+            </div>
+          </div>
+          <div class="field-group">
+            <label class="field-label" for="signup-password">Password</label>
+            <div class="field-wrapper">
+              <input type="password" id="signup-password" class="field-input" placeholder="min. 6 characters" autocomplete="new-password" />
+              <button class="field-toggle" onclick="togglePassword('signup-password', this)" type="button">show</button>
+            </div>
+            <div class="password-strength" id="strength-bar">
+              <div class="strength-fill" id="strength-fill"></div>
+            </div>
+          </div>
+          <button class="submit-btn" id="signup-btn" onclick="handleSignup()">
+            <span class="btn-text">Create Account</span>
+            <span class="btn-loader hidden"></span>
+          </button>
+          <p class="form-switch">Already a member? <a href="#" onclick="switchTab('login')">Sign in →</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
