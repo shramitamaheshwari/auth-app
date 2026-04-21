@@ -58,8 +58,11 @@ A secure, full-stack authentication system with user signup/login, JWT-based aut
 
 ## 📸 Screenshots
 
-Login Page → images/image.png  
-Dashboard → images/image2.png
+Login Page → 
+![Login Page](./images/image2.png)
+
+Dashboard → 
+![Dashboard](./images/image.png)
 
 ---
 
