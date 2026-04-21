@@ -6,7 +6,7 @@ A secure, full-stack authentication system with user signup/login, JWT-based aut
 
 ## 🌐 Live Demo
 
-- 🔗 Frontend: [https://your-app.netlify.app  ](https://gregarious-cheesecake-1cb4cd.netlify.app/)
+- 🔗 Frontend: [https://gregarious-cheesecake-1cb4cd.netlify.app/](https://gregarious-cheesecake-1cb4cd.netlify.app/)
 - ⚙️ Backend API: [https://auth-app-y8l2.onrender.com](https://auth-app-y8l2.onrender.com/)  
 
 ---
